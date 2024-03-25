@@ -1,0 +1,144 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(20px, 1fr) minmax(auto, 1060px) minmax(20px, 1fr);
+}
+
+.main-layout > *:not(.full) {
+    grid-column: 2;
+}
+
+.main-layout > *.full {
+    grid-column: 1 / -1;
+}
+
+.memes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    color: #000;
+    border: 1px black;
+    border-radius: 60px;
+    background-color: rgba(255, 255, 255, 0.233)
+}
+
+.meme-filter > fieldset {
+    position: sticky;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: 10px;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+}
+
+.meme-btn {
+    padding: 3px;
+    margin: 4px;
+}
+
+.page-actions {
+    color: #000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.page-actions > button {
+
+    height: 2.5rem;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#uploadImgBtn {
+    display: none;
+    background-color: #5bb15e;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50px;
+}
+#uploadImgBtn:hover {
+    background-color: #45a049;
+}
+
+#uploadImgBtn:hover #uploadImgBtnIcon {
+    animation: spin 1s 100ms linear;
+}
+
+#uploadImgBtnIcon {
+    padding: 2px;
+    margin-right: 10px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    gap: 10px;
+    margin: 10px;
+    border: 2px #000 solid;
+    border-radius: 60px;
+    background-color: #eee;
+}
+
+.card > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 60px;
+}
+
+#memeEditor > img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    width: 150px;
+}
+
+#memeEditor > img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+  
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    z-index: 1000;
+    width: 200px;
+}
